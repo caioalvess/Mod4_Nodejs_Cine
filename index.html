@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Cinema</title>
+</head>
+
+<body>
+
+    <section class="display-section min-vh-100 sec-padding">
+        <div class="container">
+            <div class="row">
+                <div class="section-title">
+                    <h1>Cine Resilia</h1>
+                </div>
+            </div>
+            <div class="api">
+                <div class="settings">
+                    <div class="row">
+                        <div class="menu-tabs">
+                            <button type="button" class="menu-tab-item active" data-target="#clientes">Clientes</button>
+                            <button type="button" class="menu-tab-item" data-target="#salas">Salas</button>
+                            <button type="button" class="menu-tab-item" data-target="#lanches">Lanches</button>
+                            <button type="button" class="menu-tab-item" data-target="#filmes">Filmes</button>
+                            <button type="button" class="menu-tab-item"
+                                data-target="#funcionarios">Funcionários</button>
+                        </div>
+                    </div>
+
+                    <!----------------------------
+                     CLIENTES
+                    ------------------------------->
+
+                    <div class="row menu-tab-content active" id="clientes">
+                        <div class="request">
+                            <label for="reqCliente">Escolha a requisição:</label>
+                            <select class="reqCliente">
+                                <option value="criarCliente">Criar</option>
+                                <option value="buscarCliente">Buscar</option>
+                                <option value="buscar/idCliente">Buscar/ID</option>
+                                <option value="delete/idCliente">Deletar/ID</option>
+                                <option value="update/idCliente">Atualizar/ID</option>
+                            </select>
+                        </div>
+                        <div class="api-item activer" id="createCliente">
+                            <form action="/action_page.php">
+                                <label for="name">Nome:</label><br>
+                                <input type="text" id="name" name="name"><br>
+                                <label for="age">Idade:</label><br>
+                                <input type="text" id="age" name="age"><br>
+                                <label for="doc">CPF:</label><br>
+                                <input type="text" id="doc" name="doc"><br><br>
+                                <input class="button" type="submit" value="Criar">
+                            </form>
+                        </div>
+
+                        <div class="api-item" id="getCliente">
+                            <input class="button" type="submit" value="Buscar">
+                        </div>
+
+                        <div class="api-item" id="getIdCliente">
+                            <form action="/action_page.php">
+                                <label for="idCliente">ID:</label><br>
+                                <input type="text" id="idCliente" name="idCliente"><br><br>
+                                <input class="button" type="submit" value="Buscar">
+                            </form>
+                        </div>
+
+
+                        <div class="api-item" id="deleteIdCliente">
+                            <form action="/action_page.php">
+                                <label for="deleteidCliente">ID:</label><br>
+                                <input type="text" id="deleteidCliente" name="deleteidCliente"><br><br>
+                                <input type="submit" value="Deletar">
+                            </form>
+                        </div>
+
+                        <div class="api-item" id="updateIdCliente">
+                            <form action="/action_page.php">
+                                <label for="updateidCliente">ID:</label><br>
+                                <input type="text" id="updateidCliente" name="updateidCliente"><br>
+                                <label for="updatenomeCliente">Nome:</label><br>
+                                <input type="text" id="updatenomeCliente" name="updatenomeCliente"><br>
+                                <label for="updateidadeCliente">Idade:</label><br>
+                                <input type="text" id="updateidadeCliente" name="updateidadeCliente"><br>
+                                <label for="updatecpfCliente">CPF:</label><br>
+                                <input type="text" id="updatecpfCliente" name="updatecpfCliente"><br><br>
+                                <input type="submit" value="Atualizar">
+                            </form>
+                        </div>
+
+                    </div>
+
+                    <!----------------------------
+                     SALAS 
+                    ------------------------------->
+
+                    <div class="row menu-tab-content" id="salas">
+                        <div class="request">
+                            <label for="reqSalas">Escolha a requisição:</label>
+                            <select class="reqSalas">
+                                <option value="criarSalas">Criar</option>
+                                <option value="buscarSalas">Buscar</option>
+                                <option value="buscar/idSalas">Buscar/ID</option>
+                                <option value="delete/idSalas">Deletar/ID</option>
+                                <option value="update/idSalas">Atualizar/ID</option>
+                            </select>
+                        </div>
+                        <div class="api-item activer" id="createSalas">
+                            <form action="/action_page.php">
+                                <label for="fileiraSalas">Fileiras:</label><br>
+                                <input type="text" id="fileiraSalas" name="fileiraSalas"><br>
+                                <label for="tipo">Tipo:</label><br>
+                                <input type="text" id="tipoSalas" name="tipoSalas"><br>
+                                <label for="cadeirasSalas">Cadeiras:</label><br>
+                                <input type="text" id="cadeirasSalas" name="cadeirasSalas"><br><br>
+                                <input type="submit" value="Criar">
+                            </form>
+                        </div>
+
+                        <div class="api-item" id="getSalas">
+                            <input type="submit" value="Buscar">
+                        </div>
+
+                        <div class="api-item" id="getIdSalas">
+                            <form action="/action_page.php">
+                                <label for="idSalas">ID:</label><br>
+                                <input type="text" id="idSalas" name="idSalas"><br><br>
+                                <input type="submit" value="Buscar">
+                            </form>
+                        </div>
+
+
+                        <div class="api-item" id="deleteIdSalas">
+                            <form action="/action_page.php">
+                                <label for="deleteidSalas">ID:</label><br>
+                                <input type="text" id="deleteidSalas" name="deleteidSalas"><br><br>
+                                <input type="submit" value="Deletar">
+                            </form>
+                        </div>
+
+                        <div class="api-item" id="updateIdSalas">
+                            <form action="/action_page.php">
+                                <label for="updateidSalas">ID:</label><br>
+                                <input type="text" id="updateid" name="updatefileirasSalas"><br>
+                                <label for="updatefileirasSalas">Fileiras:</label><br>
+                                <input type="text" id="updatefileirasSalas" name="updatefileirasSalas"><br>
+                                <label for="updatecadeirasSalas">Cadeiras:</label><br>
+                                <input type="text" id="updatecadeirasSalas" name="updatecadeirasSalas"><br><br>
+                                <input type="submit" value="Atualizar">
+                            </form>
+                        </div>
+
+                    </div>
+
+                    <!----------------------------
+                     LANCHES 
+                    ------------------------------->
+
+                    <div class="row menu-tab-content" id="lanches">
+                        <div class="request">
+                            <label for="reqLanches">Escolha a requisição:</label>
+                            <select class="reqLanches">
+                                <option value="criarLanches">Criar</option>
+                                <option value="buscarLanches">Buscar</option>
+                                <option value="buscar/idLanches">Buscar/ID</option>
+                                <option value="delete/idLanches">Deletar/ID</option>
+                                <option value="update/idLanches">Atualizar/ID</option>
+                            </select>
+                        </div>
+
+                        <div class="api-item activer" id="createLanches">
+                            <form action="/action_page.php">
+                                <label for="nameLanches">Nome:</label><br>
+                                <input type="text" id="nameLanches" name="nameLanches"><br>
+                                <label for="priceLanches">Preço:</label><br>
+                                <input type="text" id="priceLanches" name="priceLanches"><br>
+                                <label for="validLanches">Validade:</label><br>
+                                <input type="text" id="validLanches" name="validLanches"><br><br>
+                                <input type="submit" value="Criar">
+                            </form>
+                        </div>
+
+                        <div class="api-item" id="getLanches">
+                            <input type="submit" value="Buscar">
+                        </div>
+
+                        <div class="api-item" id="getIdLanches">
+                            <form action="/action_page.php">
+                                <label for="idLanches">ID:</label><br>
+                                <input type="text" id="idLanches" name="idLanches"><br><br>
+                                <input type="submit" value="Buscar">
+                            </form>
+                        </div>
+
+
+                        <div class="api-item" id="deleteIdLanches">
+                            <form action="/action_page.php">
+                                <label for="deleteidLanches">ID:</label><br>
+                                <input type="text" id="deleteidLanches" name="deleteidLanches"><br><br>
+                                <input type="submit" value="Deletar">
+                            </form>
+                        </div>
+
+                        <div class="api-item" id="updateIdLanches">
+                            <form action="/action_page.php">
+                                <label for="updateidLanches">ID:</label><br>
+                                <input type="text" id="updateid" name="updateidLanches"><br>
+                                <label for="updatenomeLanches">Nome:</label><br>
+                                <input type="text" id="updatenomeLanches" name="updatenomeLanches"><br>
+                                <label for="updateprecoLanches">Preço:</label><br>
+                                <input type="text" id="updateprecoLanches" name="updateprecoLanches"><br>
+                                <label for="updatevalidLanches">Validade:</label><br>
+                                <input type="text" id="updatevalidLanches" name="updatevalidLanches"><br><br>
+                                <input type="submit" value="Atualizar">
+                            </form>
+                        </div>
+                    </div>
+
+                    <!----------------------------
+                     FILMES 
+                    ------------------------------->
+
+                    <div class="row menu-tab-content" id="filmes">
+
+                        <div class="request">
+                            <label for="reqFilmes">Escolha a requisição:</label>
+                            <select class="reqFilmes">
+                                <option value="criarFilmes">Criar</option>
+                                <option value="buscarFilmes">Buscar</option>
+                                <option value="buscar/idFilmes">Buscar/ID</option>
+                                <option value="delete/idFilmes">Deletar/ID</option>
+                                <option value="update/idFilmes">Atualizar/ID</option>
+                            </select>
+                        </div>
+                        
+                        <div class="api-item activer" id="createFilmes">
+                            <form action="/action_page.php">
+                                <label for="titleFilmes">Título:</label><br>
+                                <input type="text" id="titleFilmes" name="titleFilmes"><br>
+                                <label for="genderFilmes">Gênero:</label><br>
+                                <input type="text" id="genderFilmes" name="genderFilmes"><br>
+                                <label for="lancFilmes">Lançamento:</label><br>
+                                <input type="text" id="lancFilmes" name="lancFilmes"><br>
+                                <label for="classifFilmes">Classificação:</label><br>
+                                <input type="text" id="classifFilmes" name="classifFilmes"><br><br>
+                                <input type="submit" value="Submit">
+                            </form>
+                        </div>
+
+                    <div class="api-item" id="getFilmes">
+                        <input type="submit" value="Buscar">
+                    </div>
+
+                    <div class="api-item" id="getIdFilmes">
+                        <form action="/action_page.php">
+                            <label for="idFilmes">ID:</label><br>
+                            <input type="text" id="idFilmes" name="idFilmes"><br><br>
+                            <input type="submit" value="Buscar">
+                        </form>
+                    </div>
+
+
+                    <div class="api-item" id="deleteIdFilmes">
+                        <form action="/action_page.php">
+                            <label for="deleteidFilmes">ID:</label><br>
+                            <input type="text" id="deleteidFilmes" name="deleteidFilmes"><br><br>
+                            <input type="submit" value="Deletar">
+                        </form>
+                    </div>
+
+                    <div class="api-item" id="updateIdFilmes">
+                        <form action="/action_page.php">
+                            <label for="updateidFilmes">ID:</label><br>
+                            <input type="text" id="updateid" name="updateidFilmes"><br>
+                            <label for="updatetituloFilmes">Título:</label><br>
+                            <input type="text" id="updatetituloFilmes" name="updatetituloFilmes"><br>
+                            <label for="updategenderFilmes">Gênero:</label><br>
+                            <input type="text" id="updategenderFilmes" name="updategenderFilmes"><br>
+                            <label for="updatelancamentoFilmes">Lançamento:</label><br>
+                            <input type="text" id="updateid" name="updatelancamentoFilmes"><br>
+                            <label for="updateclassificaFilmes">Classificação:</label><br>
+                            <input type="text" id="updateclassificaFilmes" name="updateclassificaFilmes"><br><br>
+                            <input type="submit" value="Atualizar">
+                        </form>
+                    </div>
+                </div>
+
+                    <!----------------------------
+                     FUNCIONÁRIOS 
+                    ------------------------------->
+
+                    <div class="row menu-tab-content" id="funcionarios">
+
+                        <div class="request">
+                            <label for="reqFuncionarios">Escolha a requisição:</label>
+                            <select class="reqFuncionarios">
+                                <option value="criarFuncionarios">Criar</option>
+                                <option value="buscarFuncionarios">Buscar</option>
+                                <option value="buscar/idFuncionarios">Buscar/ID</option>
+                                <option value="delete/idFuncionarios">Deletar/ID</option>
+                                <option value="update/idFuncionarios">Atualizar/ID</option>
+                            </select>
+                        </div>
+
+                        <div class="api-item activer" id="createFuncionarios">
+                            <form action="/action_page.php">
+                                <label for="nameFuncionarios">Nome:</label><br>
+                                <input type="text" id="name" name="nameFuncionarios"><br>
+                                <label for="salarioFuncionarios">Salário:</label><br>
+                                <input type="text" id="salarioFuncionarios" name="salarioFuncionarios"><br>
+                                <label for="turnoFuncionarios">Turno:</label><br>
+                                <input type="text" id="turnoFuncionarios" name="turnoFuncionarios"><br>
+                                <label for="cargo">Cargo:</label><br>
+                                <input type="text" id="cargoFuncionarios" name="cargoFuncionarios"><br><br>
+                                <input type="submit" value="Criar">
+                            </form>
+                        </div>
+                    </div>
+
+                    <div class="api-item" id="getFuncionarios">
+                        <input type="submit" value="Buscar">
+                    </div>
+
+                    <div class="api-item" id="getIdFuncionarios">
+                        <form action="/action_page.php">
+                            <label for="idFuncionarios">ID:</label><br>
+                            <input type="text" id="idFuncionarios" name="idFuncionarios"><br><br>
+                            <input type="submit" value="Buscar">
+                        </form>
+                    </div>
+
+
+                    <div class="api-item" id="deleteIdFuncionarios">
+                        <form action="/action_page.php">
+                            <label for="deleteidFuncionarios">ID:</label><br>
+                            <input type="text" id="deleteidFuncionarios" name="deleteidFuncionarios"><br><br>
+                            <input type="submit" value="Deletar">
+                        </form>
+                    </div>
+
+                    <div class="api-item" id="updateIdFuncionarios">
+                        <form action="/action_page.php">
+                            <label for="updateidFuncionarios">ID:</label><br>
+                            <input type="text" id="updateid" name="updateidFuncionarios"><br>
+                            <label for="updatenomeFuncionarios">Nome:</label><br>
+                            <input type="text" id="updatenomeFuncionarios" name="updatenomeFuncionarios"><br>
+                            <label for="updatesalarioFuncionarios">Salário:</label><br>
+                            <input type="text" id="updatesalarioFuncionarios" name="updatesalarioFuncionarios"><br>
+                            <label for="updatesalarioFuncionarios">Turno:</label><br>
+                            <input type="text" id="updatesalarioFuncionarios" name="updatesalarioFuncionarios"><br>
+                            <label for="updatecargoFuncionarios">Cargo:</label><br>
+                            <input type="text" id="updatecargoFuncionarios" name="updatecargoFuncionarios"><br><br>
+                            <input type="submit" value="Atualizar">
+                        </form>
+                    </div>
+
+                </div>
+
+                
+
+                <div class="results">
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="main.js"></script>
+
+</body>
+
+</html>
