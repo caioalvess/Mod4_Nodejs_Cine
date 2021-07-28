@@ -59,14 +59,14 @@
                         </div>
 
                         <div class="api-item" id="getCliente">
-                            <input class="button" type="submit" value="Buscar">
+                            <input class="button" type="submit" value="Buscar" id="getAllClients">
                         </div>
 
                         <div class="api-item" id="getIdCliente">
-                            <form action="/action_page.php">
+                            <form>
                                 <label for="idCliente">ID:</label><br>
-                                <input type="text" id="idCliente" name="idCliente"><br><br>
-                                <input class="button" type="submit" value="Buscar">
+                                <input type="text" id="idClient" name="idClient"><br><br>
+                                <input class="button" type="reset" value="Buscar" id="getIdClient">
                             </form>
                         </div>
 
@@ -364,11 +364,17 @@
                 
 
                 <div class="results">
+                    <ul id="clientesResultsUl">
+                        <li id="clientesResults">
 
+                        </li>
+                    </ul>
                 </div>
             </div>
         </div>
     </section>
+
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
 
     <script src="main.js"></script>
 

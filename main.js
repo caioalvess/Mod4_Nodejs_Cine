@@ -211,3 +211,40 @@
             document.getElementById('updateIdFuncionarios').classList.add('activer');
         }
     })
+
+
+
+    const handleButtonResults = document.getElementById('getAllClients');
+    handleButtonResults.addEventListener('click', ()=> {
+    const resultados = document.getElementById('clientesResultsUl');
+    if(resultados.lenght > 1) {
+        resultados.forEach((lista) => {
+            resultados.removeChild(resultados.childNodes[0])
+        });
+    };
+});
+
+    const handleGetAllClients = document.getElementById('getAllClients');
+    handleGetAllClients.addEventListener('click', () => {
+    return axios.get("http://localhost:3000/clientes").then((dados) => {
+        const clientes = dados.data;
+        let listaClientes = document.getElementById('clientesResults');
+            clientes.forEach((cliente)=> {
+                let listaCreate = document.createElement('li');
+                listaCreate.innerHTML = `ID: ${cliente.id} - Nome: ${cliente.nome} - Idade: ${cliente.idade} - CPF: ${cliente.cpf}`;
+                listaClientes.appendChild(listaCreate);
+             });
+    });
+});
+
+    const handleGetidClient = document.getElementById('getIdClient');
+    handleGetidClient.addEventListener('click', ()=> {
+    const id = document.getElementById('idClient').value;
+    axios.get(`http://localhost:3000/cliente/${id}`).then((dados) => {
+        const clientesId = dados.data;
+        let listaClientesId = document.getElementById('clientesResults');
+            let listaCreateId = document.createElement('li');
+            listaCreateId.innerHTML = `ID: ${clientesId.id} - Nome: ${clientesId.nome} - Idade: ${clientesId.idade} - CPF: ${clientesId.cpf}`;
+            listaClientesId.appendChild(listaCreateId);
+    })
+})
