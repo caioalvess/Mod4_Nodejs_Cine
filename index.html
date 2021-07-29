@@ -48,40 +48,40 @@
                             </select>
                         </div>
                         <div class="api-item activer" id="createCliente">
-                            <form action="/action_page.php">
+                            <form>
                                 <label for="name">Nome:</label><br>
                                 <input type="text" id="name" name="name"><br>
                                 <label for="age">Idade:</label><br>
                                 <input type="text" id="age" name="age"><br>
                                 <label for="doc">CPF:</label><br>
                                 <input type="text" id="doc" name="doc"><br><br>
-                                <input class="button" type="submit" value="Criar">
+                                <input class="button" id="criarCliente" value="Criar">
                             </form>
                         </div>
 
                         <div class="api-item" id="getCliente">
-                            <input class="button" type="submit" value="Buscar" id="getAllClients">
+                            <input class="button" value="Buscar" id="listarClientes">
                         </div>
 
                         <div class="api-item" id="getIdCliente">
                             <form>
                                 <label for="idCliente">ID:</label><br>
-                                <input type="text" id="idClient" name="idClient"><br><br>
-                                <input class="button" type="reset" value="Buscar" id="getIdClient">
+                                <input type="text" id="idClientes" name="idClientes"><br><br>
+                                <input class="button" type="reset" value="Buscar" id="listarCliente">
                             </form>
                         </div>
 
 
                         <div class="api-item" id="deleteIdCliente">
-                            <form action="/action_page.php">
+                            <form>
                                 <label for="deleteidCliente">ID:</label><br>
                                 <input type="text" id="deleteidCliente" name="deleteidCliente"><br><br>
-                                <input class="button" type="submit" value="Deletar">
+                                <input class="button" id="deletarCliente" value="Deletar">
                             </form>
                         </div>
 
                         <div class="api-item" id="updateIdCliente">
-                            <form action="/action_page.php">
+                            <form>
                                 <label for="updateidCliente">ID:</label><br>
                                 <input type="text" id="updateidCliente" name="updateidCliente"><br>
                                 <label for="updatenomeCliente">Nome:</label><br>
@@ -90,7 +90,7 @@
                                 <input type="text" id="updateidadeCliente" name="updateidadeCliente"><br>
                                 <label for="updatecpfCliente">CPF:</label><br>
                                 <input type="text" id="updatecpfCliente" name="updatecpfCliente"><br><br>
-                                <input class="button" type="submit" value="Atualizar">
+                                <input class="button" id="atualizarCliente" value="Atualizar">
                             </form>
                         </div>
 
@@ -112,47 +112,49 @@
                             </select>
                         </div>
                         <div class="api-item activer" id="createSalas">
-                            <form action="/action_page.php">
+                            <form>
                                 <label for="fileiraSalas">Fileiras:</label><br>
                                 <input type="text" id="fileiraSalas" name="fileiraSalas"><br>
                                 <label for="tipo">Tipo:</label><br>
                                 <input type="text" id="tipoSalas" name="tipoSalas"><br>
                                 <label for="cadeirasSalas">Cadeiras:</label><br>
                                 <input type="text" id="cadeirasSalas" name="cadeirasSalas"><br><br>
-                                <input class="button" type="submit" value="Criar">
+                                <input class="button" id="criarSala" value="Criar">
                             </form>
                         </div>
 
                         <div class="api-item" id="getSalas">
-                            <input class="button" type="submit" value="Buscar">
+                            <input class="button" id="listarSalas" value="Buscar">
                         </div>
 
                         <div class="api-item" id="getIdSalas">
-                            <form action="/action_page.php">
+                            <form>
                                 <label for="idSalas">ID:</label><br>
                                 <input type="text" id="idSalas" name="idSalas"><br><br>
-                                <input class="button" type="submit" value="Buscar">
+                                <input class="button" id="listarSala" value="Buscar">
                             </form>
                         </div>
 
 
                         <div class="api-item" id="deleteIdSalas">
-                            <form action="/action_page.php">
+                            <form>
                                 <label for="deleteidSalas">ID:</label><br>
                                 <input type="text" id="deleteidSalas" name="deleteidSalas"><br><br>
-                                <input class="button" type="submit" value="Deletar">
+                                <input class="button" id="deletarSala" value="Deletar">
                             </form>
                         </div>
 
                         <div class="api-item" id="updateIdSalas">
-                            <form action="/action_page.php">
+                            <form>
                                 <label for="updateidSalas">ID:</label><br>
-                                <input type="text" id="updateid" name="updatefileirasSalas"><br>
+                                <input type="text" id="updateidSala" name="updatefileirasSalas"><br>
+                                <label for="updatetipoSalas">Tipo:</label><br>
+                                <input type="text" id="updatetipoSalas" name="updatetipoSalas"><br>
                                 <label for="updatefileirasSalas">Fileiras:</label><br>
                                 <input type="text" id="updatefileirasSalas" name="updatefileirasSalas"><br>
                                 <label for="updatecadeirasSalas">Cadeiras:</label><br>
                                 <input type="text" id="updatecadeirasSalas" name="updatecadeirasSalas"><br><br>
-                                <input class="button" type="submit" value="Atualizar">
+                                <input class="button" id="atualizarSala" value="Atualizar">
                             </form>
                         </div>
 
@@ -175,49 +177,49 @@
                         </div>
 
                         <div class="api-item activer" id="createLanches">
-                            <form action="/action_page.php">
+                            <form>
                                 <label for="nameLanches">Nome:</label><br>
                                 <input type="text" id="nameLanches" name="nameLanches"><br>
                                 <label for="priceLanches">Preço:</label><br>
                                 <input type="text" id="priceLanches" name="priceLanches"><br>
                                 <label for="validLanches">Validade:</label><br>
                                 <input type="text" id="validLanches" name="validLanches"><br><br>
-                                <input class="button" type="submit" value="Criar">
+                                <input class="button" id="criarLanche" value="Criar">
                             </form>
                         </div>
 
                         <div class="api-item" id="getLanches">
-                            <input class="button" type="submit" value="Buscar">
+                            <input class="button" id="listarLanches" value="Buscar">
                         </div>
 
                         <div class="api-item" id="getIdLanches">
-                            <form action="/action_page.php">
+                            <form>
                                 <label for="idLanches">ID:</label><br>
                                 <input type="text" id="idLanches" name="idLanches"><br><br>
-                                <input class="button" type="submit" value="Buscar">
+                                <input class="button" id="listarLanche" value="Buscar">
                             </form>
                         </div>
 
 
                         <div class="api-item" id="deleteIdLanches">
-                            <form action="/action_page.php">
+                            <form>
                                 <label for="deleteidLanches">ID:</label><br>
                                 <input type="text" id="deleteidLanches" name="deleteidLanches"><br><br>
-                                <input class="button" type="submit" value="Deletar">
+                                <input class="button" id="deletarLanche" value="Deletar">
                             </form>
                         </div>
 
                         <div class="api-item" id="updateIdLanches">
-                            <form action="/action_page.php">
+                            <form>
                                 <label for="updateidLanches">ID:</label><br>
-                                <input type="text" id="updateid" name="updateidLanches"><br>
+                                <input type="text" id="updateidLanches" name="updateidLanches"><br>
                                 <label for="updatenomeLanches">Nome:</label><br>
                                 <input type="text" id="updatenomeLanches" name="updatenomeLanches"><br>
                                 <label for="updateprecoLanches">Preço:</label><br>
                                 <input type="text" id="updateprecoLanches" name="updateprecoLanches"><br>
                                 <label for="updatevalidLanches">Validade:</label><br>
                                 <input type="text" id="updatevalidLanches" name="updatevalidLanches"><br><br>
-                                <input class="button" type="submit" value="Atualizar">
+                                <input class="button" id="atualizarLanche" value="Atualizar">
                             </form>
                         </div>
                     </div>
@@ -240,7 +242,7 @@
                         </div>
 
                         <div class="api-item activer" id="createFilmes">
-                            <form action="/action_page.php">
+                            <form>
                                 <label for="titleFilmes">Título:</label><br>
                                 <input type="text" id="titleFilmes" name="titleFilmes"><br>
                                 <label for="genderFilmes">Gênero:</label><br>
@@ -249,44 +251,44 @@
                                 <input type="text" id="lancFilmes" name="lancFilmes"><br>
                                 <label for="classifFilmes">Classificação:</label><br>
                                 <input type="text" id="classifFilmes" name="classifFilmes"><br><br>
-                                <input class="button" type="submit" value="Submit">
+                                <input class="button" id="criarFilme" value="Criar">
                             </form>
                         </div>
 
                         <div class="api-item" id="getFilmes">
-                            <input class="button" type="submit" value="Buscar">
+                            <input class="button" id="listarFilmes" value="Buscar">
                         </div>
 
                         <div class="api-item" id="getIdFilmes">
-                            <form action="/action_page.php">
+                            <form>
                                 <label for="idFilmes">ID:</label><br>
                                 <input type="text" id="idFilmes" name="idFilmes"><br><br>
-                                <input class="button" type="submit" value="Buscar">
+                                <input class="button" id="listarFilme" value="Buscar">
                             </form>
                         </div>
 
 
                         <div class="api-item" id="deleteIdFilmes">
-                            <form action="/action_page.php">
+                            <form>
                                 <label for="deleteidFilmes">ID:</label><br>
                                 <input type="text" id="deleteidFilmes" name="deleteidFilmes"><br><br>
-                                <input class="button" type="submit" value="Deletar">
+                                <input class="button" id="deletarFilme" value="Deletar">
                             </form>
                         </div>
 
                         <div class="api-item" id="updateIdFilmes">
-                            <form action="/action_page.php">
+                            <form>
                                 <label for="updateidFilmes">ID:</label><br>
-                                <input type="text" id="updateid" name="updateidFilmes"><br>
+                                <input type="text" id="updateidFilmes" name="updateidFilmes"><br>
                                 <label for="updatetituloFilmes">Título:</label><br>
                                 <input type="text" id="updatetituloFilmes" name="updatetituloFilmes"><br>
                                 <label for="updategenderFilmes">Gênero:</label><br>
                                 <input type="text" id="updategenderFilmes" name="updategenderFilmes"><br>
                                 <label for="updatelancamentoFilmes">Lançamento:</label><br>
-                                <input type="text" id="updateid" name="updatelancamentoFilmes"><br>
+                                <input type="text" id="updatelancamentoFilmes" name="updatelancamentoFilmes"><br>
                                 <label for="updateclassificaFilmes">Classificação:</label><br>
                                 <input type="text" id="updateclassificaFilmes" name="updateclassificaFilmes"><br><br>
-                                <input class="button" type="submit" value="Atualizar">
+                                <input class="button" id="atualizarFilme" value="Atualizar">
                             </form>
                         </div>
                     </div>
@@ -309,54 +311,54 @@
                         </div>
 
                         <div class="api-item activer" id="createFuncionarios">
-                            <form action="/action_page.php">
+                            <form>
                                 <label for="nameFuncionarios">Nome:</label><br>
-                                <input type="text" id="name" name="nameFuncionarios"><br>
+                                <input type="text" id="nameFuncionarios" name="nameFuncionarios"><br>
                                 <label for="salarioFuncionarios">Salário:</label><br>
                                 <input type="text" id="salarioFuncionarios" name="salarioFuncionarios"><br>
                                 <label for="turnoFuncionarios">Turno:</label><br>
                                 <input type="text" id="turnoFuncionarios" name="turnoFuncionarios"><br>
                                 <label for="cargo">Cargo:</label><br>
                                 <input type="text" id="cargoFuncionarios" name="cargoFuncionarios"><br><br>
-                                <input class="button" type="submit" value="Criar">
+                                <input class="button" id="criarFuncionario" value="Criar">
                             </form>
                         </div>
 
 
                         <div class="api-item" id="getFuncionarios">
-                            <input class="button" type="submit" value="Buscar">
+                            <input class="button" id="listarFuncionarios" value="Buscar">
                         </div>
 
                         <div class="api-item" id="getIdFuncionarios">
-                            <form action="/action_page.php">
+                            <form>
                                 <label for="idFuncionarios">ID:</label><br>
                                 <input type="text" id="idFuncionarios" name="idFuncionarios"><br><br>
-                                <input class="button" type="submit" value="Buscar">
+                                <input class="button" id="listarFuncionario" value="Buscar">
                             </form>
                         </div>
 
 
                         <div class="api-item" id="deleteIdFuncionarios">
-                            <form action="/action_page.php">
+                            <form>
                                 <label for="deleteidFuncionarios">ID:</label><br>
                                 <input type="text" id="deleteidFuncionarios" name="deleteidFuncionarios"><br><br>
-                                <input class="button" type="submit" value="Deletar">
+                                <input class="button" id="deletarFuncionario" value="Deletar">
                             </form>
                         </div>
 
                         <div class="api-item" id="updateIdFuncionarios">
-                            <form action="/action_page.php">
+                            <form>
                                 <label for="updateidFuncionarios">ID:</label><br>
-                                <input type="text" id="updateid" name="updateidFuncionarios"><br>
+                                <input type="text" id="updateidFuncionarios" name="updateidFuncionarios"><br>
                                 <label for="updatenomeFuncionarios">Nome:</label><br>
                                 <input type="text" id="updatenomeFuncionarios" name="updatenomeFuncionarios"><br>
                                 <label for="updatesalarioFuncionarios">Salário:</label><br>
                                 <input type="text" id="updatesalarioFuncionarios" name="updatesalarioFuncionarios"><br>
-                                <label for="updatesalarioFuncionarios">Turno:</label><br>
-                                <input type="text" id="updatesalarioFuncionarios" name="updatesalarioFuncionarios"><br>
+                                <label for="updateturnoFuncionarios">Turno:</label><br>
+                                <input type="text" id="updateturnoFuncionarios" name="updateturnoFuncionarios"><br>
                                 <label for="updatecargoFuncionarios">Cargo:</label><br>
                                 <input type="text" id="updatecargoFuncionarios" name="updatecargoFuncionarios"><br><br>
-                                <input class="button" type="submit" value="Atualizar">
+                                <input class="button" id="atualizarFuncionario" value="Atualizar">
                             </form>
                         </div>
                     </div>                   
@@ -380,12 +382,11 @@
                 </footer>
     </section>
 
-
-
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
-
+     <script src="api.js"></script>
     <script src="main.js"></script>
-
+   
 </body>
 
 </html>
