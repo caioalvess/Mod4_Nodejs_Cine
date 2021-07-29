@@ -45,6 +45,7 @@ body {
     font-weight: 300;
     color: var(--white-light);
     overflow-y: hidden;
+    overflow-x: hidden;
    
 }
 
@@ -118,9 +119,39 @@ h6 {
 /*-------------------
  DISPLAY-SECTION
  -------------------- */
+ @keyframes zoomInOut {
+    0%, 100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(2.0);
+    }
+}
 
- .display-section {
-     background-color: black;
+ .display-section::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    background-color: #000000d8;
+    opacity: 0.6;
+    z-index: -1;
+    }
+
+ .display-section .social-bg {
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    background-image: url('./img/movie-theater.jpg');
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+    z-index: -2;
+    animation: zoomInOut 20s ease;
  }
 
  .section-title {
@@ -158,9 +189,10 @@ h6 {
  .api {
      display: flex;
      height: 100%;
+     flex-wrap: nowrap;
  }
 
- .settings, .results {
+ .settings {
      padding: 50px;
      width: 50%;
      height: calc(100% - 43px);
@@ -169,8 +201,19 @@ h6 {
      align-items: center;
  }
 
+ .results {
+     padding: 28px 0 0 0;
+     margin-top: 35px;
+     height: calc(100% - 43px);
+     display: flex;
+     flex-direction: column;
+     align-items: center;
+     width: 50%;
+ }
+
  .menu-tabs {
-     margin-bottom: 50px;
+     margin-bottom: 20px;
+     margin-top: 20px;
  }
 
  .menu-tab-item {
@@ -213,6 +256,7 @@ h6 {
 .api-item.activer {
     display: flex;
     width: 100%;
+    height: 30px;
 }
 
 select {
@@ -222,6 +266,8 @@ select {
 form input{
     width: 400px;
     height: 30px;
+    border: solid 1px white;
+    padding: 0 10px;
 }
 
 form .row {
@@ -231,5 +277,48 @@ form .row {
 
 .button {
     width: 200px!important;
+    cursor: pointer;
+    font-size: 20px;
+    background-color: white;
+    font-weight: 500;
+    font-family: 'Poppins', sans-serif;
+    text-transform: uppercase;
+}
+
+.button:hover {
+    box-shadow: 0 0 10px red,
+    0 0 20px red,
+    0 0 40px red,
+    0 0 80px red,
+    0 0 160px red;
+}
+
+    footer {
+    height: 50px;
+    position: absolute;
+    bottom: 0;
+    left: 9%;
+    }
+
+
+
+small {
+ color: white;
+ position: relative;
+}
+
+small::before {
+    content: '';
+    position: absolute;
+    top: -20px;
+    left: 0;
+    height: 1px;
+    width: 500px;
+    background-color: white;
+    box-shadow: 0 0 10px red,
+    0 0 20px red,
+    0 0 40px red,
+    0 0 80px red,
+    0 0 160px red;
 }
 
